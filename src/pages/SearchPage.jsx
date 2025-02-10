@@ -6,7 +6,7 @@ import ProductsList from '../components/ProductsList'
 
 
 const url = '/'
-export const loader = async () => {
+export const loader = async ({request}) => {
   const params = Object.fromEntries([
     ...new URL(request.url).searchParams.entries()
   ])
