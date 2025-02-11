@@ -6,10 +6,15 @@ import ProductsList from '../components/ProductsList'
 
 
 const url = '/'
-export const loader = async () => {
-  const response = await fetch('http://localhost:3001/api/v1/posts');
+export const loader = async ({request}) => {
+  const params = Object.fromEntries([
+    ...new URL(request.url).searchParams.entries(),
+  ])
+
+  const response = await fetch('http://localhost:3001/api/v1/posts', {params});
   const data = await response.json();
-  console.log(data);
+  const meta = await response.meta
+  console.log(data, params, meta);
   
   return data; // データを返す
 };
