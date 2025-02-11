@@ -1,8 +1,8 @@
-import axios from "axios"
+// import axios from "axios"
 
 
-const productionUrl = 'http://localhost:3001/api/v1/posts'
+// const productionUrl = 'http://localhost:3001/api/v1/posts'
 
-export const customFetch = axios.create({
-    baseURL: productionUrl,
-})
+// export const customFetch = axios.create({
+//     baseURL: productionUrl,
+// })

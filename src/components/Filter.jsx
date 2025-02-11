@@ -5,7 +5,9 @@ const Filter = () => {
 
 
   return (
-    <div>Filter</div>
+    <>
+    <h1>Filter</h1>
+    </>
   )
 }
 

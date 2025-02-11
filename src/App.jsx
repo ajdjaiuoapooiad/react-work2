@@ -7,7 +7,7 @@ import {loader as productLoader } from './pages/SearchPage'
 
 const router = createBrowserRouter([
   {
-    path: '',
+    path: '/',
     element: <HomeLayout />,
     children: [
       {

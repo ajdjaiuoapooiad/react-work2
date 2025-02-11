@@ -1,5 +1,4 @@
 
-import { customFetch } from '../utils'
 import Filter from '../components/Filter'
 import ProductsList from '../components/ProductsList'
 
@@ -19,16 +18,15 @@ export const loader = async () => {
 
 const SearchPage = () => {
   return (
-    <>
-      <div>
-        <Filter />
+    <div className='grid grid-cols-4'>
+      <div className='col-span-1'>
+        Hello
       </div>
 
-      <div>
-        <ProductsList />
-
+      <div className='col-span-3'>
+        Hello2
       </div>
-    </>
+    </div>
   )
 }
 
