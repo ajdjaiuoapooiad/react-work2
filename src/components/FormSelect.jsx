@@ -2,7 +2,7 @@ import React from 'react'
 import { categories } from '../../data';
 
 
-const FormSelect = ({list}) => {
+const FormSelect = ({name, list, defaultValue}) => {
   console.log(list);
     
   
@@ -10,7 +10,8 @@ const FormSelect = ({list}) => {
     <div className='my-12'>
       <select
         className='rounded-2xl'
-    
+        name={name}
+        defaultValue={defaultValue}
         >
           {list.map((item) => {
             return (

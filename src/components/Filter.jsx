@@ -8,6 +8,7 @@ import { categories, companies } from '../../data'
 
 const Filter = () => {
   const { params } = useLoaderData()
+  const { search, category, company } = params
   console.log(params)
   const list1 = categories
   const list2 = companies
@@ -18,15 +19,17 @@ const Filter = () => {
     <div className='bg-gray-400 h-screen h-800'>
     
       <div className='text-3xl'>Filter</div>
+
+      
       <Form className='my-5 mx-12'>
 
-        <FormInput  />
+        <FormInput name='seach' defaultValue={search}  />
  
-        <FormSelect list={list1} />
+        <FormSelect name='category' list={list1} defaultValue={category} />
 
-        <FormSelect  list={list2} />
+        <FormSelect name='company'  list={list2} defaultValue={company} />
 
-        <button className='btn bg-gray-600 rounded my-5 p-3' type='submit'>検索</button>
+        <button type='submit' className='btn bg-gray-600 rounded my-5 p-3' >検索</button>
       </Form>
     </div>
   )

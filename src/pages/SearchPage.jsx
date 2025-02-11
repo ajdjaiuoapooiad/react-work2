@@ -13,10 +13,12 @@ export const loader = async ({request}) => {
   ])
 
   const response = await customFetch(url, {params});
-  const data = await response.data;
+  const data = response.data;
   console.log(data, params);
+  console.log(`URL: ${url}, params: ${JSON.stringify(params)}`);
   
-  return data; // データを返す
+  
+  return {data, params}; // データを返す
 };
 
 

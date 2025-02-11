@@ -1,10 +1,10 @@
 import React from 'react'
 
-const FormInput = () => {
+const FormInput = ({name, defaultValue}) => {
   return (
     <div className='my-12'>
       <label htmlFor=""></label>
-      <input  />
+      <input name={name} defaultValue={defaultValue} />
     </div>
   )
 }

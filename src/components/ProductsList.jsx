@@ -3,16 +3,16 @@ import { useLoaderData } from "react-router-dom";
 
 const ProductsList = () => {
 
-    const products = useLoaderData()
+    const {data} = useLoaderData()
     
-    console.log(products);
+    console.log(data);
     
 
   return (
     <>
         <div className="text-3xl">検索結果</div>
         <div>
-            {products.map((product) => {
+            {data.map((product) => {
             const { id, title, category, income} = product;
             return (
               <div>
