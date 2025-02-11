@@ -23,7 +23,7 @@ const Filter = () => {
       
       <Form className='my-5 mx-12'>
 
-        <FormInput name='seach' defaultValue={search}  />
+        <FormInput name='search' defaultValue={search}  />
  
         <FormSelect name='category' list={list1} defaultValue={category} />
 
