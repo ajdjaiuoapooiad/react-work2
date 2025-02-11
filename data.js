@@ -1,7 +1,7 @@
 
 export const categories = [
 "all",
-"Tables",
+"test",
 "Chairs",
 "Kids",
 "Sofas",
