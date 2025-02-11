@@ -5,7 +5,7 @@ const FormSelect = () => {
   return (
     <div className='my-12'>
       <select
-        
+        className='rounded-2xl'
         >
           {list.map((item) => {
             return (

@@ -23,8 +23,8 @@ export const loader = async ({request}) => {
 
 const SearchPage = () => {
   return (
-    <div className='grid grid-cols-4'>
-      <div className='col-span-1'>
+    <div className='grid grid-cols-4 '>
+      <div className='col-span-1 '>
         <Filter />
       </div>
 
