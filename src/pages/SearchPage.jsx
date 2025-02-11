@@ -1,6 +1,7 @@
 
 import Filter from '../components/Filter'
 import ProductsList from '../components/ProductsList'
+import { customFetch } from '../utils';
 
 
 
@@ -11,10 +12,9 @@ export const loader = async ({request}) => {
     ...new URL(request.url).searchParams.entries(),
   ])
 
-  const response = await fetch('http://localhost:3001/api/v1/posts', {params});
-  const data = await response.json();
-  const meta = await response.meta
-  console.log(data, params, meta);
+  const response = await customFetch(url, {params});
+  const data = await response.data;
+  console.log(data, params);
   
   return data; // データを返す
 };
