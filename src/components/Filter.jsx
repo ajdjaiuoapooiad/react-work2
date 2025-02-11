@@ -6,7 +6,8 @@ const Filter = () => {
 
   return (
     <>
-    <h1>Filter</h1>
+    
+      <div className='text-3xl'>Filter</div>
     </>
   )
 }

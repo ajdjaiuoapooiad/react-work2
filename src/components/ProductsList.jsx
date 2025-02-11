@@ -10,7 +10,7 @@ const ProductsList = () => {
 
   return (
     <>
-        <div>ProductCard</div>
+        <div className="text-3xl">検索結果</div>
         <div>
             {products.map((product) => {
             const { id, title, category, income} = product;

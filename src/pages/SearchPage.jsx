@@ -20,11 +20,11 @@ const SearchPage = () => {
   return (
     <div className='grid grid-cols-4'>
       <div className='col-span-1'>
-        Hello
+        <Filter />
       </div>
 
       <div className='col-span-3'>
-        Hello2
+        <ProductsList  />
       </div>
     </div>
   )
