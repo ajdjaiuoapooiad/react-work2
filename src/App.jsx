@@ -7,7 +7,7 @@ import {loader as productLoader } from './pages/SearchPage'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '',
     element: <HomeLayout />,
     children: [
       {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         loader: productLoader,
       },
       {
-        path: '/create-post',
+        path: 'create-post',
         element: <CreatePage />,
       },
       

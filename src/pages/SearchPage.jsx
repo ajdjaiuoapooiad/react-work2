@@ -1,21 +1,22 @@
-import React from 'react'
+
 import { customFetch } from '../utils'
 import Filter from '../components/Filter'
 import ProductsList from '../components/ProductsList'
 
 
 
-const url = '/'
-export const loader = async ({request}) => {
-  const params = Object.fromEntries([
-    ...new URL(request.url).searchParams.entries()
-  ])
-  const response = await customFetch(url, { params })
-  const products = response.data.data
-  const meta = response.data.meta
 
-  return { params, products, meta }
-}
+const url = '/'
+export const loader = async () => {
+  const response = await fetch('http://localhost:3001/api/v1/posts');
+  const data = await response.json();
+  console.log(data);
+  
+  return data; // データを返す
+};
+
+
+
 const SearchPage = () => {
   return (
     <>
@@ -25,6 +26,7 @@ const SearchPage = () => {
 
       <div>
         <ProductsList />
+
       </div>
     </>
   )
