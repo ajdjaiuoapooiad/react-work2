@@ -1,11 +1,16 @@
 import React from 'react'
+import { categories } from '../../data';
 
-const FormSelect = () => {
-  const list = ['Option 1', 'Option 2', 'Option 3'];
+
+const FormSelect = ({list}) => {
+  console.log(list);
+    
+  
   return (
     <div className='my-12'>
       <select
         className='rounded-2xl'
+    
         >
           {list.map((item) => {
             return (
