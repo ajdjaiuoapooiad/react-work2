@@ -1,5 +1,5 @@
 import React from 'react'
-import { categories } from '../../data';
+
 
 
 const FormSelect = ({name, list, defaultValue}) => {

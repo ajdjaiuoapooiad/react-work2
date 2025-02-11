@@ -7,11 +7,11 @@ export const categories = [
 "Sofas",
 "Beds"
 ]
-export const companies = [
+export const incomes = [
 "all",
-"Modenza",
-"Luxora",
-"Artifex",
-"Comfora",
-"Homestead"
+200,
+300,
+400,
+500,
+600
 ]

@@ -15,8 +15,10 @@ const ProductsList = () => {
             {data.map((product) => {
             const { id, title, category, income} = product;
             return (
-              <div>
-                <h1 key={id}>{title}</h1>
+              <div className="border px-12 py-5">
+                <h1 key={id} className="text-2xl font-bold">{title}</h1>
+                <p>{category}</p>
+                <p>{income}</p>
               </div>
             );
             })}
