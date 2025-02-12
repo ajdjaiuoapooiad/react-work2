@@ -1,11 +1,16 @@
 
 export const categories = [
 "all",
-"test",
-"Chairs",
-"Kids",
-"Sofas",
-"Beds"
+"エンジニア",
+"営業",
+"事務",
+"デザイン",
+"マーケティング",
+"財務、経理",
+"カスタマーサポート",
+"人事",
+"製造",
+"医療介護"
 ]
 export const incomes = [
 "all",
@@ -13,5 +18,7 @@ export const incomes = [
 300,
 400,
 500,
-600
+600,
+700,
+800
 ]
