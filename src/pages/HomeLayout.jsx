@@ -1,10 +1,13 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import Navbar from '../components/Navbar'
 
 const HomeLayout = () => {
   return (
     <>
-       <div className='text-5xl font-bold'>HomeLayout</div>
+       <header className='bg-gray-700'>
+         <Navbar />
+       </header>
        <Outlet />
     </>
   )
