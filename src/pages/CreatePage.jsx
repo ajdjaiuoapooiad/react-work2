@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-
+import { useNavigate } from "react-router-dom";
 
 
 const CreatePage = () => {
@@ -9,12 +9,12 @@ const CreatePage = () => {
   const [ income,setInocme ] = useState('')
   const [ category,setCategory ] = useState('')
   console.log(title, income, category);
-  
+  const navigate = useNavigate() // react-router-domのuseNavigateを使う
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log(title, income, category);
-
+    
 
     try {
       await axios.post('http://localhost:3001/api/v1/posts', {
@@ -23,6 +23,7 @@ const CreatePage = () => {
         income: income,
       })
       console.log('投稿しました');
+      navigate('/')
       
     }catch (error) {
       alert('投稿できませんでした')
