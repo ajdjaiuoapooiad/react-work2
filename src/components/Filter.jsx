@@ -18,7 +18,7 @@ const Filter = () => {
   return (
     <div className='bg-gray-400 h-screen '>
     
-      <div className='text-3xl'>Filter</div>
+      <div className='text-2xl font-bold p-3'>検索フォーム</div>
 
       
       <Form className='my-5 mx-12'>
