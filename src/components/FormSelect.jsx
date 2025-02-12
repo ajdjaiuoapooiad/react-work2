@@ -7,9 +7,10 @@ const FormSelect = ({name, list, defaultValue}) => {
     
   
   return (
-    <div className='my-12'>
+    <div className=''>
+
       <select
-        className='rounded-2xl'
+        className='rounded-2xl px-4 py-2'
         name={name}
         defaultValue={defaultValue}
         >
