@@ -16,7 +16,7 @@ const Filter = () => {
 
 
   return (
-    <div className='bg-gray-400 h-screen h-800'>
+    <div className='bg-gray-400 h-screen '>
     
       <div className='text-3xl'>Filter</div>
 

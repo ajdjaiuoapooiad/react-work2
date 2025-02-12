@@ -30,15 +30,27 @@ const CreatePage = () => {
   }
 
   return (
-    <>
-      <div>CreatePage</div>
+    <div className='container px-12 py-10 '>
+      <div className='text-3xl font-bold'>CreatePage</div>
       <form action="" onSubmit={handleSubmit}>
-        <input type="text" className='mx-5 my-12' onChange={(e) => setTitle(e.target.value)} /><br />
-        <input type="text" className='mx-5 my-12' onChange={(e) => setCategory(e.target.value)} /><br />
-        <input type="text" className='mx-5 my-12' onChange={(e) => setInocme(e.target.value)} /><br />
-        <button type='submit' className='btn bg-gray-500 rounded-md mx-12'>投稿する</button>
+
+      <div className='my-10'>
+        <label htmlFor="" className='font-bold'>タイトル</label><br />
+        <input type="text" className=' px-5' onChange={(e) => setTitle(e.target.value)} /><br />
+      </div>
+
+      <div className='my-10'>
+        <label htmlFor="" className='font-bold'>カテゴリ</label><br />
+        <input type="text" className='px-5' onChange={(e) => setCategory(e.target.value)} /><br />
+      </div>
+
+      <div className='my-10'>
+        <label htmlFor="" className='font-bold'>年収（万円）</label><br />
+        <input type="text" className='px-5' onChange={(e) => setInocme(e.target.value)} /><br />
+      </div>
+        <button type='submit' className='btn bg-gray-500 rounded-md mx-12 p-3 hover:bg-gray-600 text-white'>投稿する</button>
       </form>
-    </>
+    </div>
   )
 }
 
