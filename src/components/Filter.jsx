@@ -31,7 +31,7 @@ const Filter = () => {
         <div className='pt-10'>年収（万円）</div>
         <FormSelect name='income'  list={list2} defaultValue={income} />
 
-        <button type='submit' className='btn bg-gray-600 rounded my-10 p-3' >検索</button>
+        <button type='submit' className='btn bg-gray-800 rounded-md my-10 p-3 text-white hover:bg-gray-700' >検索</button>
       </Form>
     </div>
   )
