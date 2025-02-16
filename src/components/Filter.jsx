@@ -6,7 +6,7 @@ import { Form } from 'react-router-dom'
 
 
 
-const Filter = () => {
+const Filter = ({data}) => {
   const list1 = categories
   const list2 = incomes
   const search = ''
@@ -18,7 +18,15 @@ const Filter = () => {
     console.log(e.target.search.value, e.target.category.value, e.target.income.value)
 
     try {
-      data.filter()
+      const filteredData = data.filter((item) => {
+        return (
+          item.title.includes(e.target.search.value) &&
+          item.category === e.target.category.value &&
+          item.income === e.target.income.value
+        )
+      })
+      console.log(filteredData);
+      setData(filteredData)
     }catch (error) {
       alert('��索できませんでした')
     }

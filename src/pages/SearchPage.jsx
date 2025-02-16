@@ -17,7 +17,7 @@ const SearchPage = () => {
   return (
     <div className='grid grid-cols-4 '>
       <div className='col-span-1 h-1500'>
-        <Filter />
+        <Filter data={data} />
       </div>
 
       <div className='col-span-3'>
