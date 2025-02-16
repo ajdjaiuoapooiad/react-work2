@@ -17,7 +17,7 @@ const CreatePage = () => {
     
 
     try {
-      await axios.post('http://localhost:3001/api/v1/posts', {
+      await axios.post('https://rails-react-deploy.onrender.com/api/v1/posts', {
         title: title,
         category: category,
         income: income,
