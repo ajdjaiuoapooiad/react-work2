@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import db from '../../db';
 
 
 const CreatePage = () => {
-
+  const [ data,setData ] = useState(db);
   const [ title,setTitle ] = useState('')
   const [ income,setInocme ] = useState('')
   const [ category,setCategory ] = useState('')
@@ -17,11 +17,12 @@ const CreatePage = () => {
     
 
     try {
-      await axios.post('https://rails-react-deploy.onrender.com/api/v1/posts', {
-        title: title,
-        category: category,
-        income: income,
-      })
+      setData((prevJob) => {
+        return [
+          ...prevJob,
+          { id: 30, title: title, income: income, category: category },
+        ];
+      });
       console.log('投稿しました');
       navigate('/')
       
