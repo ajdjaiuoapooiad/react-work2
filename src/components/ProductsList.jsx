@@ -1,9 +1,9 @@
-import { useLoaderData } from "react-router-dom";
-
+import { useState } from "react";
+import db from "../../db";
 
 const ProductsList = () => {
 
-    const {data} = useLoaderData()
+    const [ data,setData ] = useState(db);
     
     console.log(data);
     
