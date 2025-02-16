@@ -1,6 +1,8 @@
 
+import { useState } from 'react';
 import Filter from '../components/Filter'
 import ProductsList from '../components/ProductsList'
+import db from '../../db';
 
 
 
@@ -10,6 +12,8 @@ import ProductsList from '../components/ProductsList'
 
 
 const SearchPage = () => {
+  const [ data,setData ] = useState(db);
+
   return (
     <div className='grid grid-cols-4 '>
       <div className='col-span-1 h-1500'>
@@ -17,7 +21,7 @@ const SearchPage = () => {
       </div>
 
       <div className='col-span-3'>
-        <ProductsList  />
+        <ProductsList data={data} />
       </div>
     </div>
   )

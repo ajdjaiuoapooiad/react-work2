@@ -13,6 +13,7 @@ const FormSelect = ({name, list, defaultValue}) => {
         className='rounded-2xl px-4 py-2'
         name={name}
         defaultValue={defaultValue}
+        onChange={(e) => console.log(e.target.value)}
         >
           {list.map((item) => {
             return (

@@ -12,6 +12,18 @@ const Filter = () => {
   const search = ''
   const category = ''
   const income = ''
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(e.target.search.value, e.target.category.value, e.target.income.value)
+
+    try {
+      data.filter()
+    }catch (error) {
+      alert('��索できませんでした')
+    }
+  }
+
   
 
 
@@ -21,7 +33,7 @@ const Filter = () => {
       <div className='text-2xl font-bold p-3'>検索フォーム</div>
 
       
-      <Form className='my-5 mx-12'>
+      <Form className='my-5 mx-12' onSubmit={handleSubmit}>
 
         <FormInput name='search' defaultValue={search}  />
  

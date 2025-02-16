@@ -1,11 +1,8 @@
 import { useState } from "react";
 import db from "../../db";
 
-const ProductsList = () => {
-
-    const [ data,setData ] = useState(db);
-    
-    console.log(data);
+const ProductsList = ({data}) => {
+  console.log(data);
     
 
   return (
