@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         loader: productLoader,
       },
       {
-        path: 'create-post',
+        path: '/create-post',
         element: <CreatePage />,
       },
       
