@@ -1,7 +1,7 @@
 
 export const categories = [
 "all",
-"test",
+"エンジニア",
 "営業",
 "事務",
 "デザイン",
