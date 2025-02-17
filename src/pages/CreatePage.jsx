@@ -17,6 +17,7 @@ const CreatePage = () => {
     
 
     try {
+      navigate('/')
       setData((prevJob) => {
         return [
           ...prevJob,
@@ -24,7 +25,6 @@ const CreatePage = () => {
         ];
       });
       console.log('投稿しました');
-      navigate('/')
       
     }catch (error) {
       alert('投稿できませんでした')
