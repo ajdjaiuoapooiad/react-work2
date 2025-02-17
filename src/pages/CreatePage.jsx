@@ -35,39 +35,42 @@ const CreatePage = () => {
   }
 
   return (
-    <div className='container px-12 py-10 '>
-      <div className='text-3xl font-bold'>CreatePage</div>
-      <form action="" onSubmit={handleSubmit}>
+    <div className='container mx-10 my-10 border-2 w-1/2 border-gray-400 rounded-md'>
+      <div  className='mx-20 my-10 '>
 
-      <div className='my-10'>
-        <label htmlFor="" className='font-bold'>タイトル</label><br />
-        <input type="text" className=' px-5' onChange={(e) => setTitle(e.target.value)} /><br />
-      </div>
+        <div className='text-3xl font-bold'>CreatePage</div>
+        <form action="" onSubmit={handleSubmit}>
 
-      <div className='my-10'>
-        <label htmlFor="" className='font-bold'>カテゴリ</label><br />
-        {/* <input type="text" className='px-5' onChange={(e) => setCategory(e.target.value)} /><br /> */}
-        
-        <select
-        className='rounded-2xl px-10 py-2'
-        onChange={(e) => setCategory(e.target.value)}
-        >
-          {list.map((item) => {
-            return (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            );
-          })}
-        </select>
-      </div>
+        <div className='my-10'>
+          <label htmlFor="" className='font-bold text-2xl'>タイトル</label><br />
+          <input type="text" className='w-full px-3 py-2' onChange={(e) => setTitle(e.target.value)} /><br />
+        </div>
 
-      <div className='my-10'>
-        <label htmlFor="" className='font-bold'>年収（万円）</label><br />
-        <input type="text" className='px-5' onChange={(e) => setInocme(e.target.value)} /><br />
+        <div className='my-10'>
+          <label htmlFor="" className='font-bold text-2xl'>カテゴリ</label><br />
+          {/* <input type="text" className='px-5' onChange={(e) => setCategory(e.target.value)} /><br /> */}
+          
+          <select
+          className='rounded-2xl w-full px-4 py-2 font-bold '
+          onChange={(e) => setCategory(e.target.value)}
+          >
+            {list.map((item) => {
+              return (
+                <option key={item} value={item} className='font-bold'>
+                  {item}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+
+        <div className='my-10'>
+          <label htmlFor="" className='font-bold text-2xl'>年収（万円）</label><br />
+          <input type="text" className='w-full py-2 px-3' onChange={(e) => setInocme(e.target.value)} /><br />
+        </div>
+          <button type='submit' className='btn bg-gray-500 rounded-md mx-12 p-3 hover:bg-gray-600 text-white'>投稿する</button>
+        </form>
       </div>
-        <button type='submit' className='btn bg-gray-500 rounded-md mx-12 p-3 hover:bg-gray-600 text-white'>投稿する</button>
-      </form>
     </div>
   )
 }
