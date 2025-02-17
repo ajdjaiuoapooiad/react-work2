@@ -14,7 +14,7 @@ export const categories = [
 ]
 
 export const listCategories = [
-    '',
+    '選択してください',
     "エンジニア",
     "営業",
     "事務",

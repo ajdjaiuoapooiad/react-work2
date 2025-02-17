@@ -42,8 +42,8 @@ const CreatePage = () => {
         <form action="" onSubmit={handleSubmit}>
 
         <div className='my-10'>
-          <label htmlFor="" className='font-bold text-2xl'>タイトル</label><br />
-          <input type="text" className='w-full px-3 py-2' onChange={(e) => setTitle(e.target.value)} /><br />
+          <label htmlFor="" className='font-bold text-2xl '>タイトル</label><br />
+          <input type="text" className='w-full px-3 py-2 rounded-2xl my-4' onChange={(e) => setTitle(e.target.value)} /><br />
         </div>
 
         <div className='my-10'>
@@ -51,7 +51,7 @@ const CreatePage = () => {
           {/* <input type="text" className='px-5' onChange={(e) => setCategory(e.target.value)} /><br /> */}
           
           <select
-          className='rounded-2xl w-full px-4 py-2 font-bold '
+          className='rounded-2xl w-full px-4 py-2 font-bold my-4'
           onChange={(e) => setCategory(e.target.value)}
           >
             {list.map((item) => {
@@ -66,7 +66,7 @@ const CreatePage = () => {
 
         <div className='my-10'>
           <label htmlFor="" className='font-bold text-2xl'>年収（万円）</label><br />
-          <input type="text" className='w-full py-2 px-3' onChange={(e) => setInocme(e.target.value)} /><br />
+          <input type="text" className='w-full py-2 px-3 rounded-2xl my-4' onChange={(e) => setInocme(e.target.value)} /><br />
         </div>
           <button type='submit' className='btn bg-gray-500 rounded-md mx-12 p-3 hover:bg-gray-600 text-white'>投稿する</button>
         </form>
