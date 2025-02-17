@@ -61,6 +61,7 @@ const Filter = ({data, setData}) => {
       
       <Form className='my-5 mx-12' onSubmit={handleSubmit}>
 
+        
         <FormInput name='search' defaultValue={search}  />
 
         <div className=''>カテゴリ</div>
