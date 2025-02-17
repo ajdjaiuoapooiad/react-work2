@@ -18,10 +18,15 @@ const Filter = ({data, setData}) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(e.target.search.value, e.target.category.value, e.target.income.value)
-    if (e.target.category.value === 'all') {
+    if ( e.target.search.value === '' && e.target.category.value === 'all' && e.target.income.value === 'all') {
       setData(allData)
-    } else {
+      console.log(allData);
+    } else if( e.target.search.value === '' && e.target.category.value !== 'all' && e.target.income.value === 'all') {
       const posts = data.filter((item) => item.category === e.target.category.value)
+      setData(posts)
+      console.log(posts)
+    }else if( e.target.search.value === '' && e.target.category.value !== 'all' && e.target.income.value !== 'all') {
+      const posts = data.filter((item) => item.category === e.target.category.value).filter((item) => item.income === Number(e.target.income.value))
       setData(posts)
       console.log(posts)
     }
