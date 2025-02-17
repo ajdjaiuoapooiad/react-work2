@@ -3,10 +3,12 @@ import FormSelect from './FormSelect'
 import FormInput from './FormInput'
 import { categories, incomes } from '../../data'
 import { Form } from 'react-router-dom'
+import db from '../../db'
 
 
 
-const Filter = ({data}) => {
+const Filter = ({data, setData}) => {
+  const allData = db
   const list1 = categories
   const list2 = incomes
   const search = ''
@@ -16,20 +18,15 @@ const Filter = ({data}) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(e.target.search.value, e.target.category.value, e.target.income.value)
-
-    try {
-      const filteredData = data.filter((item) => {
-        return (
-          item.title.includes(e.target.search.value) &&
-          item.category === e.target.category.value &&
-          item.income === e.target.income.value
-        )
-      })
-      console.log(filteredData);
-      setData(filteredData)
-    }catch (error) {
-      alert('��索できませんでした')
+    if (e.target.category.value === 'all') {
+      setData(allData)
+    } else {
+      const posts = data.filter((item) => item.category === e.target.category.value)
+      setData(posts)
+      console.log(posts)
     }
+
+    
   }
 
   
