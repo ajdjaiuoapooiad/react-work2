@@ -25,8 +25,24 @@ const Filter = ({data, setData}) => {
       const posts = data.filter((item) => item.category === e.target.category.value)
       setData(posts)
       console.log(posts)
+    }else if( e.target.search.value === '' && e.target.category.value === 'all' && e.target.income.value !== 'all') {
+      const posts = data.filter((item) => item.income === Number(e.target.income.value))
+      setData(posts)
+      console.log(posts)
     }else if( e.target.search.value === '' && e.target.category.value !== 'all' && e.target.income.value !== 'all') {
       const posts = data.filter((item) => item.category === e.target.category.value).filter((item) => item.income === Number(e.target.income.value))
+      setData(posts)
+      console.log(posts)
+    }else if( e.target.search.value !== '' && e.target.category.value === 'all' && e.target.income.value === 'all') {
+      const posts = data.filter((item) => item.title.includes(e.target.search.value))
+      setData(posts)
+      console.log(posts)
+    }else if( e.target.search.value !== '' && e.target.category.value !== 'all' && e.target.income.value === 'all') {
+      const posts = data.filter((item) => item.title.includes(e.target.search.value)).filter((item) => item.category === e.target.category.value)
+      setData(posts)
+      console.log(posts)
+    }else if( e.target.search.value !== '' && e.target.category.value === 'all' && e.target.income.value !== 'all') {
+      const posts = data.filter((item) => item.title.includes(e.target.search.value)).filter((item) => item.income === Number(e.target.income.value))
       setData(posts)
       console.log(posts)
     }
