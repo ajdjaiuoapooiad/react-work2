@@ -9,7 +9,7 @@ const ProductsList = ({data}) => {
     <>
         <div className="px-10 py-5">
           <div className="text-2xl font-bold">検索結果</div>
-          <p className="font-bold">{data.length}件</p>
+          <p className="font-bold">該当件数: {data.length}件</p>
         </div>
 
         <div>
