@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import db from '../../db';
+import { listCategories } from '../../data';
+
 
 
 const CreatePage = () => {
@@ -10,6 +12,7 @@ const CreatePage = () => {
   const [ category,setCategory ] = useState('')
   console.log(title, income, category);
   const navigate = useNavigate() // react-router-domのuseNavigateを使う
+  const list = listCategories
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -43,7 +46,20 @@ const CreatePage = () => {
 
       <div className='my-10'>
         <label htmlFor="" className='font-bold'>カテゴリ</label><br />
-        <input type="text" className='px-5' onChange={(e) => setCategory(e.target.value)} /><br />
+        {/* <input type="text" className='px-5' onChange={(e) => setCategory(e.target.value)} /><br /> */}
+        
+        <select
+        className='rounded-2xl px-10 py-2'
+        onChange={(e) => setCategory(e.target.value)}
+        >
+          {list.map((item) => {
+            return (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            );
+          })}
+        </select>
       </div>
 
       <div className='my-10'>
