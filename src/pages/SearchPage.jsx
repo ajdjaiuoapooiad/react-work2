@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Filter from '../components/Filter'
 import ProductsList from '../components/ProductsList'
 import db from '../../db';
@@ -17,6 +17,18 @@ const SearchPage = () => {
   const location = useLocation()
   console.log(location);
   const createItem = location.state?.data;
+  const title = String(createItem.title)
+  const income = Number(createItem.income)
+  const category = String(createItem.category)
+  console.log(createItem);
+  const data2 = { id: 31, title: title, category: category, income: income}
+
+  // 新規登録したデータを追加する
+  useEffect(() => {
+    setData((prevData) => [...prevData, data2]);
+  }, [])
+  console.log(data);
+  
 
 
   return (

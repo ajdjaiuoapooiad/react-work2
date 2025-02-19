@@ -17,7 +17,7 @@ const CreatePage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log(title, income, category);
-    const data = { id: 30, title: title, income: income, category: category }
+    const data = { id: 31, title: title, income: income, category: category }
 
     try {
       setData((prevJob) => {
@@ -53,10 +53,11 @@ const CreatePage = () => {
           <select
           className='rounded-2xl w-full px-4 py-2 font-bold my-4'
           onChange={(e) => setCategory(e.target.value)}
+          typeof='text'
           >
             {list.map((item) => {
               return (
-                <option key={item} value={item} className='font-bold'>
+                <option  key={item} value={item} className='font-bold'>
                   {item}
                 </option>
               );
@@ -66,7 +67,7 @@ const CreatePage = () => {
 
         <div className='my-10'>
           <label htmlFor="" className='font-bold text-2xl'>年収（万円）</label><br />
-          <input type="text" className='w-full py-2 px-3 rounded-2xl my-4' onChange={(e) => setInocme(e.target.value)} /><br />
+          <input type="number" className='w-full py-2 px-3 rounded-2xl my-4' onChange={(e) => setInocme(e.target.value)} /><br />
         </div>
           <button type='submit' className='btn bg-gray-700 rounded-md mx-12 p-3 hover:bg-gray-600 text-white'>投稿する</button>
         </form>
