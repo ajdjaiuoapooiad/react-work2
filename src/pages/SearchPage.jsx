@@ -15,19 +15,20 @@ import { useLocation } from 'react-router-dom';
 const SearchPage = () => {
   const location = useLocation()
   const [ data,setData ] = useState(db);
-  const createItem = location.state?.data;
-  const title = String(createItem.title)
-  const income = Number(createItem.income)
-  const category = String(createItem.category)
-  console.log(createItem);
-  const data2 = { id: 31, title: title, category: category, income: income}
-
-  // 新規登録したデータを追加する
-  useEffect(() => {
-    setData((prevData) => [...prevData, data2]);
-  }, [])
-  console.log(data);
+  if (location && location.state) {
+    const createItem = location.state?.data;
+    const title = String(createItem.title)
+    const income = Number(createItem.income)
+    const category = String(createItem.category)
+    console.log(createItem);
+    const data2 = { id: 31, title: title, category: category, income: income}
   
+    // 新規登録したデータを追加する
+    useEffect(() => {
+      setData((prevData) => [...prevData, data2]);
+    }, [])
+  }
+  console.log(data);
 
 
   return (
@@ -39,7 +40,6 @@ const SearchPage = () => {
       <div className='col-span-3'>
         <ProductsList 
         data={data} 
-        createItem={createItem}
         />
       </div>
     </div>
