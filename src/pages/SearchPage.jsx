@@ -13,9 +13,8 @@ import { useLocation } from 'react-router-dom';
 
 
 const SearchPage = () => {
-  const [ data,setData ] = useState(db);
   const location = useLocation()
-  console.log(location);
+  const [ data,setData ] = useState(db);
   const createItem = location.state?.data;
   const title = String(createItem.title)
   const income = Number(createItem.income)

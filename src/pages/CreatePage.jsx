@@ -20,12 +20,6 @@ const CreatePage = () => {
     const data = { id: 31, title: title, income: income, category: category }
 
     try {
-      setData((prevJob) => {
-        return [
-          ...prevJob,
-          {data},
-        ];
-      });
       console.log('投稿しました');
       navigate('/',{state: {data}})
       
