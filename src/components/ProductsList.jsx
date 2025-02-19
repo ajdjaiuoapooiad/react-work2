@@ -1,7 +1,6 @@
-import { useState } from "react";
-import db from "../../db";
 
-const ProductsList = ({data}) => {
+
+const ProductsList = ({data, createItem}) => {
   console.log(data);
     
 
@@ -13,6 +12,22 @@ const ProductsList = ({data}) => {
         </div>
 
         <div>
+          
+          {/* 新規登録したアイテムを表示 */}
+          {(() => {
+              if( createItem ){
+                return (
+                  <div className="border border-gray-500 mx-10 my-5 px-10 py-5 bg-white rounded-md">
+                    <h1 key={createItem?.id} className="text-2xl font-bold">{createItem?.title}</h1>
+                    <p className="">カテゴリ: {createItem?.category}</p>
+                    <p>年収: {createItem?.income}万円</p>
+                  </div>  
+                )
+            }
+          })()}
+            
+
+
             {data.map((product) => {
             const { id, title, category, income} = product;
             return (

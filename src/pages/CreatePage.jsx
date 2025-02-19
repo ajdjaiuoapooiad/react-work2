@@ -17,17 +17,17 @@ const CreatePage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log(title, income, category);
-    
+    const data = { id: 30, title: title, income: income, category: category }
 
     try {
-      navigate('/')
       setData((prevJob) => {
         return [
           ...prevJob,
-          { id: 30, title: title, income: income, category: category },
+          {data},
         ];
       });
       console.log('投稿しました');
+      navigate('/',{state: {data}})
       
     }catch (error) {
       alert('投稿できませんでした')
